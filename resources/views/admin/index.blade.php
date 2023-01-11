@@ -2,8 +2,8 @@
 @section('admin')
 
 
-<div class="page-content">
-<div class="container-fluid">
+<div class="page-content bg-dark">
+<div class="container-fluid ">
 
 <!-- start page title -->
 <div class="row">
@@ -13,7 +13,7 @@
 
     <div class="page-title-right">
         <ol class="breadcrumb m-0">
-            <li class="breadcrumb-item"><a href="javascript: void(0);">Upcube</a></li>
+            <li class="breadcrumb-item"><a href="javascript: void(0);">shr_creation</a></li>
             <li class="breadcrumb-item active">Dashboard</li>
         </ol>
     </div>
@@ -25,7 +25,7 @@
 
 <div class="row">
 <div class="col-xl-3 col-md-6">
-<div class="card">
+<div class="card bg-light">
     <div class="card-body">
         <div class="d-flex">
             <div class="flex-grow-1">
@@ -35,15 +35,15 @@
             </div>
             <div class="avatar-sm">
                 <span class="avatar-title bg-light text-primary rounded-3">
-                    <i class="ri-shopping-cart-2-line font-size-24"></i>  
+                    <i class="ri-shopping-cart-2-line font-size-24"></i>
                 </span>
             </div>
-        </div>                                            
+        </div>
     </div><!-- end cardbody -->
 </div><!-- end card -->
 </div><!-- end col -->
 <div class="col-xl-3 col-md-6">
-<div class="card">
+<div class="card bg-light">
     <div class="card-body">
         <div class="d-flex">
             <div class="flex-grow-1">
@@ -53,15 +53,15 @@
             </div>
             <div class="avatar-sm">
                 <span class="avatar-title bg-light text-success rounded-3">
-                    <i class="mdi mdi-currency-usd font-size-24"></i>  
+                    <i class="mdi mdi-currency-usd font-size-24"></i>
                 </span>
             </div>
-        </div>                                              
+        </div>
     </div><!-- end cardbody -->
 </div><!-- end card -->
 </div><!-- end col -->
 <div class="col-xl-3 col-md-6">
-<div class="card">
+<div class="card bg-light">
     <div class="card-body">
         <div class="d-flex">
             <div class="flex-grow-1">
@@ -71,15 +71,15 @@
             </div>
             <div class="avatar-sm">
                 <span class="avatar-title bg-light text-primary rounded-3">
-                    <i class="ri-user-3-line font-size-24"></i>  
+                    <i class="ri-user-3-line font-size-24"></i>
                 </span>
             </div>
-        </div>                                              
+        </div>
     </div><!-- end cardbody -->
 </div><!-- end card -->
 </div><!-- end col -->
 <div class="col-xl-3 col-md-6">
-<div class="card">
+<div class="card bg-light">
     <div class="card-body">
         <div class="d-flex">
             <div class="flex-grow-1">
@@ -89,27 +89,27 @@
             </div>
             <div class="avatar-sm">
                 <span class="avatar-title bg-light text-success rounded-3">
-                    <i class="mdi mdi-currency-btc font-size-24"></i>  
+                    <i class="mdi mdi-currency-btc font-size-24"></i>
                 </span>
             </div>
-        </div>                                              
+        </div>
     </div><!-- end cardbody -->
 </div><!-- end card -->
 </div><!-- end col -->
 </div><!-- end row -->
 
 <div class="row">
- 
+
 
 <div class="row">
 <div class="col-xl-12">
-<div class="card">
+<div class="card bg-light">
     <div class="card-body">
         <div class="dropdown float-end">
             <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="mdi mdi-dots-vertical"></i>
             </a>
-         
+
         </div>
 
         <h4 class="card-title mb-4">Latest Transactions</h4>
@@ -239,7 +239,7 @@
 </div><!-- end card -->
 </div>
 <!-- end col -->
- 
+
 
 
 </div>
