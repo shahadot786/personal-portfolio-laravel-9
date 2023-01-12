@@ -1,9 +1,8 @@
  <div class="vertical-menu bg-dark border-end border-1 border-secondary">
 
-     <div data-simplebar class="h-100">
+     <div class="h-100" data-simplebar>
 
          <!-- User details -->
-
 
          <!--- Sidemenu -->
          <div id="sidebar-menu">
@@ -12,28 +11,25 @@
                  <li class="menu-title">Menu</li>
 
                  <li>
-                     <a href="{{ route('dashboard') }}" class="waves-effect">
+                     <a class="waves-effect" href="{{ route('dashboard') }}">
                          {{-- <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span> --}}
                          <span>Dashboard</span>
                      </a>
                  </li>
 
-
-
                  <li>
-                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                     <a class="has-arrow waves-effect" href="javascript: void(0);">
                          <i class="ri-home-fill"></i>
-                         <span>Home Slide Setup</span>
+                         <span>Home Section</span>
                      </a>
                      <ul class="sub-menu" aria-expanded="false">
-                         <li><a href="#">Home Slide</a></li>
+                         <li><a href="{{ route('home.slide') }}">Update Home Section</a></li>
 
                      </ul>
                  </li>
 
-
                  <li>
-                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                     <a class="has-arrow waves-effect" href="javascript: void(0);">
                          <i class="ri-file-info-fill"></i>
                          <span>About Page Setup</span>
                      </a>
@@ -44,9 +40,8 @@
                      </ul>
                  </li>
 
-
                  <li>
-                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                     <a class="has-arrow waves-effect" href="javascript: void(0);">
                          <i class="ri-user-fill"></i>
                          <span>Portfolio Page Setup</span>
                      </a>
@@ -57,12 +52,10 @@
                      </ul>
                  </li>
 
-
-
                  <li class="menu-title">Pages</li>
 
                  <li>
-                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                     <a class="has-arrow waves-effect" href="javascript: void(0);">
                          <i class="ri-newspaper-fill"></i>
                          <span>Blog Category</span>
                      </a>
@@ -73,7 +66,7 @@
                  </li>
 
                  <li>
-                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                     <a class="has-arrow waves-effect" href="javascript: void(0);">
                          <i class="ri-profile-line"></i>
                          <span>Blog Page</span>
                      </a>
@@ -84,35 +77,27 @@
                      </ul>
                  </li>
 
-
                  <li>
-                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                     <a class="has-arrow waves-effect" href="javascript: void(0);">
                          <i class="ri-file-chart-fill"></i>
                          <span>Footer Page Setup</span>
                      </a>
                      <ul class="sub-menu" aria-expanded="false">
                          <li><a href="#">Footer Setup</a></li>
 
-
                      </ul>
                  </li>
 
-
                  <li>
-                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                     <a class="has-arrow waves-effect" href="javascript: void(0);">
                          <i class="ri-contacts-book-2-fill"></i>
                          <span>Contact Message </span>
                      </a>
                      <ul class="sub-menu" aria-expanded="false">
                          <li><a href="#">Contact Message</a></li>
 
-
                      </ul>
                  </li>
-
-
-
-
 
              </ul>
          </div>

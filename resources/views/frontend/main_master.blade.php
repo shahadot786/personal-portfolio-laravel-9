@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Ariyan - Personal Portfolio</title>
+        <title>SHR_Creation - Personal Portfolio</title>
         <meta name="shr_creation personal portfolio" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
