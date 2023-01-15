@@ -3,6 +3,9 @@
     <!-- banner-area -->
     @include('frontend.home_all.home_slide')
     <!-- banner-area-end -->
+    <!-- about-area -->
+    @include('frontend.home_all.home_about')
+    <!-- about-area-end -->
     <!-- services-area -->
     <section class="services">
         <div class="container">

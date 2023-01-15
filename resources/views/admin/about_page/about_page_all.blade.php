@@ -7,21 +7,21 @@
 
             <div class="row">
                 <div class="col-12">
-                    <div class="card bg-light">
+                    <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">Update Home Section</h4>
+                            <h4 class="card-title">About Page </h4>
 
-                            <form method="post" action="{{ route('update.slider',$homeslide->id) }}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('update.about') }}" enctype="multipart/form-data">
                                 @csrf
 
-                                <input name="id" type="hidden" value="{{ $homeslide->id }}">
+                                <input name="id" type="hidden" value="{{ $aboutpage->id }}">
 
                                 <div class="row mb-3">
                                     <label class="col-sm-2 col-form-label" for="example-text-input">Title</label>
                                     <div class="col-sm-10">
                                         <input class="form-control" id="example-text-input" name="title" type="text"
-                                            value="{{ $homeslide->title }}">
+                                            value="{{ $aboutpage->title }}">
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -30,24 +30,37 @@
                                     <label class="col-sm-2 col-form-label" for="example-text-input">Short Title </label>
                                     <div class="col-sm-10">
                                         <input class="form-control" id="example-text-input" name="short_title"
-                                            type="text" value="{{ $homeslide->short_title }}">
+                                            type="text" value="{{ $aboutpage->short_title }}">
                                     </div>
                                 </div>
                                 <!-- end row -->
 
                                 <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label" for="example-text-input">Video URL </label>
+                                    <label class="col-sm-2 col-form-label" for="example-text-input">Short Description
+                                    </label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="example-text-input" name="video_url" type="text"
-                                            value="{{ $homeslide->video_url }}">
+                                        <textarea class="form-control" name="short_description" required="" rows="5">
+                 {{ $aboutpage->short_description }}
+                    </textarea>
                                     </div>
                                 </div>
                                 <!-- end row -->
 
                                 <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label" for="example-text-input">Hero Image </label>
+                                    <label class="col-sm-2 col-form-label" for="example-text-input">Long Description
+                                    </label>
                                     <div class="col-sm-10">
-                                        <input class="form-control" id="image" name="home_slide" type="file">
+                                        <textarea id="elm1" name="long_description">
+   {{ $aboutpage->long_description }}
+      </textarea>
+                                    </div>
+                                </div>
+                                <!-- end row -->
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label" for="example-text-input">About Image </label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="image" name="about_image" type="file">
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -56,12 +69,13 @@
                                     <label class="col-sm-2 col-form-label" for="example-text-input"> </label>
                                     <div class="col-sm-10">
                                         <img class="avatar-lg rounded" id="showImage"
-                                            src="{{ !empty($homeslide->home_slide) ? url($homeslide->home_slide) : url('upload/home_about/no_image.jpg') }}"
+                                            src="{{ !empty($aboutpage->about_image) ? url($aboutpage->about_image) : url('upload/home_about/no_image.jpg') }}"
                                             alt="Card image cap">
                                     </div>
                                 </div>
                                 <!-- end row -->
-                                <input class="btn btn-info waves-effect waves-light" type="submit" value="Update">
+                                <input class="btn btn-info waves-effect waves-light" type="submit"
+                                    value="Update About Page">
                             </form>
 
                         </div>
