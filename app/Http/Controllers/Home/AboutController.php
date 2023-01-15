@@ -6,6 +6,7 @@ use App\Models\About;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Skills;
+use App\Models\Training;
 use Intervention\Image\Facades\Image;
 
 class AboutController extends Controller
@@ -114,10 +115,59 @@ class AboutController extends Controller
     {
         return view('admin.about_page.about_traning');
     } //end method
+    public function AddTraning()
+    {
+        return view('admin.about_page.about_add_traning');
+    } //end method
 
+    public function StoreTraning(Request $request)
+    {
+        $trainings = new Training();
+        $trainings->title = $request->title;
+        $trainings->institute = $request->institute;
+        $trainings->topics = $request->topics;
+        $trainings->country = $request->country;
+        $trainings->location = $request->location;
+        $trainings->duration = $request->duration;
+        $trainings->start_date = $request->start_date;
+        $trainings->end_date = $request->end_date;
+        $trainings->save();
+
+        return view('admin.about_page.about_traning');
+    } //end method
+
+    public function EditTraning($id)
+    {
+        $tranings = Training::find($id);
+        return view('admin.about_page.edit_traning', compact('tranings'));
+    } //end method
+
+    public function UpdateTraning(Request $request, $id)
+    {
+        $trainings = Training::find($id);
+        $trainings->title = $request->title;
+        $trainings->institute = $request->institute;
+        $trainings->topics = $request->topics;
+        $trainings->country = $request->country;
+        $trainings->location = $request->location;
+        $trainings->duration = $request->duration;
+        $trainings->start_date = $request->start_date;
+        $trainings->end_date = $request->end_date;
+        $trainings->save();
+
+        return view('admin.about_page.about_traning');
+    } //end method
+
+    public function DeleteTraning($id)
+    {
+        $trainings = Training::where('id', $id)->delete();
+
+        return view('admin.about_page.about_traning', compact('trainings'));
+    } //end method
+
+    //education
     public function AboutEducation()
     {
-
         return view('admin.about_page.about_education');
     } //end method
 }

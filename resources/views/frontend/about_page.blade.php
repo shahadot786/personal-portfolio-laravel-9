@@ -7,6 +7,7 @@
 <main>
     @php
         $skills = App\Models\Skills::all();
+        $trainings = App\Models\Training::all();
     @endphp
     <!-- breadcrumb-area -->
     <section class="breadcrumb__wrap">
@@ -129,58 +130,25 @@
                             <div class="tab-pane fade" id="awards" role="tabpanel" aria-labelledby="awards-tab">
                                 <div class="about__award__wrap">
                                     <div class="row justify-content-center">
-                                        <div class="col-md-6 col-sm-9">
-                                            <div class="about__award__item">
-                                                <div class="award__logo">
-                                                    <img src="assets/img/images/awards_01.png" alt="">
-                                                </div>
-                                                <div class="award__content">
-                                                    <h5 class="title">Best ux designer award in 2002</h5>
-                                                    <p>There are many variations of passages of Lorem Ipsum available,
-                                                        but the majority have suffered alteration in some form, by
-                                                        injected humour,</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-9">
-                                            <div class="about__award__item">
-                                                <div class="award__logo">
-                                                    <img src="assets/img/images/awards_02.png" alt="">
-                                                </div>
-                                                <div class="award__content">
-                                                    <h5 class="title">BBA final examination 2001</h5>
-                                                    <p>There are many variations of passages of Lorem Ipsum available,
-                                                        but the majority have suffered alteration in some form, by
-                                                        injected humour,</p>
+                                        @foreach ($trainings as $training)
+                                            <div class="col-md-6 col-sm-9">
+                                                <div class="about__award__item">
+                                                    <div class="award__content">
+                                                        <h5 class="title">{{ $training->title }}</h5>
+                                                        <h6>{{ $training->institute }}</h6>
+                                                        <p>{{ $training->location }}
+                                                            <span>{{ $training->country }}</span>
+                                                        </p>
+                                                        <em>{{ $training->duration }}</em>
+                                                        <br>
+                                                        <strong>{{ $training->start_date }}</strong>
+                                                        <br>
+                                                        <strong>{{ $training->end_date }}</strong>
+                                                        <p>{{ $training->topics }}</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-9">
-                                            <div class="about__award__item">
-                                                <div class="award__logo">
-                                                    <img src="assets/img/images/awards_03.png" alt="">
-                                                </div>
-                                                <div class="award__content">
-                                                    <h5 class="title">User research award 2020</h5>
-                                                    <p>There are many variations of passages of Lorem Ipsum available,
-                                                        but the majority have suffered alteration in some form, by
-                                                        injected humour,</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-9">
-                                            <div class="about__award__item">
-                                                <div class="award__logo">
-                                                    <img src="assets/img/images/awards_04.png" alt="">
-                                                </div>
-                                                <div class="award__content">
-                                                    <h5 class="title">Dsigning award 2021</h5>
-                                                    <p>There are many variations of passages of Lorem Ipsum available,
-                                                        but the majority have suffered alteration in some form, by
-                                                        injected humour,</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -192,37 +160,6 @@
                                             <div class="about__education__item">
                                                 <h3 class="title">DPR Engineering Dhaka University</h3>
                                                 <span class="date">2004 – 2016</span>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but
-                                                    the majority have suffered alteration in some form, by injected
-                                                    humour,There are many variations of passages of Lorem Ipsum
-                                                    available, but the majority have suffered
-                                                    alteration in some form, by injected humour.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="about__education__item">
-                                                <h3 class="title">Product Designer at google</h3>
-                                                <span class="date">2021 – Present</span>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but
-                                                    the majority have suffered alteration in some form, by injected
-                                                    humour,There are many variations of passages of Lorem Ipsum
-                                                    available.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="about__education__item">
-                                                <h3 class="title">Computer Science - england</h3>
-                                                <span class="date">2008 – 2012</span>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but
-                                                    the majority have suffered alteration in some form, by injected
-                                                    humour,There are many variations of passages of Lorem Ipsum
-                                                    available.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="about__education__item">
-                                                <h3 class="title">Pro product design with udemey</h3>
-                                                <span class="date">2016 - 2020</span>
                                                 <p>There are many variations of passages of Lorem Ipsum available, but
                                                     the majority have suffered alteration in some form, by injected
                                                     humour,There are many variations of passages of Lorem Ipsum

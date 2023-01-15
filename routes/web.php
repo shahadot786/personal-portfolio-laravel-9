@@ -45,6 +45,11 @@ Route::middleware('auth')->group(function () {
         Route::get('/delete/skill/{id}', 'DeleteSkill')->name('delete.skill');
         //traning
         Route::get('/about/traning', 'AboutTraning')->name('about.traning');
+        Route::get('/about/add/traning', 'AddTraning')->name('about.add_training');
+        Route::post('/store/traning', 'StoreTraning')->name('store.traning');
+        Route::get('/edit/traning/{id}', 'EditTraning')->name('edit.traning');
+        Route::post('/update/traning{id}', 'UpdateTraning')->name('update.traning');
+        Route::get('/delete/traning/{id}', 'DeleteTraning')->name('delete.traning');
         //education
         Route::get('/about/education', 'AboutEducation')->name('about.education');
     });
