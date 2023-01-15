@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Models\About;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Education;
 use App\Models\Skills;
 use App\Models\Training;
 use Intervention\Image\Facades\Image;
@@ -170,4 +171,53 @@ class AboutController extends Controller
     {
         return view('admin.about_page.about_education');
     } //end method
+
+    public function AddEducation()
+    {
+        return view('admin.about_page.about_add_education');
+    } //end method
+
+    public function StoreEducation(Request $request)
+    {
+        $educations = new Education();
+        $educations->title = $request->title;
+        $educations->subject = $request->subject;
+        $educations->institute = $request->institute;
+        $educations->result = $request->result;
+        $educations->passing_year = $request->passing_year;
+        $educations->duration = $request->duration;
+        $educations->achievement = $request->achievement;
+        $educations->save();
+
+        return view('admin.about_page.about_education');
+    } //end method
+
+    public function EditEducation($id)
+    {
+        $educations = Education::find($id);
+        return view('admin.about_page.edit_education', compact('educations'));
+    } //end method
+
+    public function UpdateEducation(Request $request, $id)
+    {
+        $educations = Education::find($id);
+        $educations->title = $request->title;
+        $educations->subject = $request->subject;
+        $educations->institute = $request->institute;
+        $educations->result = $request->result;
+        $educations->passing_year = $request->passing_year;
+        $educations->duration = $request->duration;
+        $educations->achievement = $request->achievement;
+        $educations->save();
+
+        return view('admin.about_page.about_education');
+    } //end method
+
+    public function DeleteEducation($id)
+    {
+        $educations = Education::where('id', $id)->delete();
+
+        return view('admin.about_page.about_education', compact('educations'));
+    } //end method
+
 }

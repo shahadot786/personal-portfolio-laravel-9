@@ -52,6 +52,11 @@ Route::middleware('auth')->group(function () {
         Route::get('/delete/traning/{id}', 'DeleteTraning')->name('delete.traning');
         //education
         Route::get('/about/education', 'AboutEducation')->name('about.education');
+        Route::get('/about/add/education', 'AddEducation')->name('about.add_education');
+        Route::post('/store/education', 'StoreEducation')->name('store.education');
+        Route::get('/edit/education/{id}', 'EditEducation')->name('edit.education');
+        Route::post('/update/education{id}', 'UpdateEducation')->name('update.education');
+        Route::get('/delete/education/{id}', 'DeleteEducation')->name('delete.education');
     });
 });
 

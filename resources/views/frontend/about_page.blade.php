@@ -8,6 +8,7 @@
     @php
         $skills = App\Models\Skills::all();
         $trainings = App\Models\Training::all();
+        $educations = App\Models\Education::all();
     @endphp
     <!-- breadcrumb-area -->
     <section class="breadcrumb__wrap">
@@ -156,17 +157,19 @@
                                 aria-labelledby="education-tab">
                                 <div class="about__education__wrap">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="about__education__item">
-                                                <h3 class="title">DPR Engineering Dhaka University</h3>
-                                                <span class="date">2004 – 2016</span>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but
-                                                    the majority have suffered alteration in some form, by injected
-                                                    humour,There are many variations of passages of Lorem Ipsum
-                                                    available, but the majority have suffered
-                                                    alteration in some form, by injected humour.</p>
+                                        @foreach ($educations as $education)
+                                            <div class="col-md-6">
+                                                <div class="about__education__item">
+                                                    <h3 class="title">{{ $education->title }}</h3>
+                                                    <p>{{ $education->institute }}</p>
+                                                    <em>{{ $education->subject }}</em>
+                                                    <em>{{ $education->result }}</em>
+                                                    <span class="date">{{ $education->passing_year }}</span>
+                                                    <p>{{ $education->duration }}</p>
+                                                    <p>{{ $education->achievement }}</p>
+                                                </div>
                                             </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
