@@ -13,6 +13,8 @@
                             $totalSkills = App\Models\Skills::count();
                             $totalTrainings = App\Models\Training::count();
                             $totalEducations = App\Models\Education::count();
+                            $videosCount = App\Models\Video::count();
+                            $videos = App\Models\Video::all();
                         @endphp
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
@@ -33,14 +35,14 @@
                         <div class="card-body">
                             <div class="d-flex">
                                 <div class="flex-grow-1">
-                                    <p class="text-truncate font-size-14 mb-2">Total Products</p>
-                                    <h2 class="mb-2">{{ $totalSkills }}</h2>
+                                    <p class="text-truncate font-size-14 mb-2">Total Videos</p>
+                                    <h2 class="mb-2">{{ $videosCount }}</h2>
                                     <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i
                                                 class="me-1 align-middle"></i></span></p>
                                 </div>
                                 <div class="avatar-sm">
                                     <span class="avatar-title bg-light text-primary rounded-3">
-                                        <i class="ri-shield-cross-fill font-size-24"></i>
+                                        <i class="ri-video-upload-fill font-size-24"></i>
                                     </span>
                                 </div>
                             </div>
@@ -120,39 +122,33 @@
 
                                 </div>
 
-                                <h4 class="card-title mb-4">Latest Blogs</h4>
+                                <h4 class="card-title mb-4">Latest Videos</h4>
 
                                 <div class="table-responsive">
                                     <table class="table-centered table-hover table-nowrap mb-0 table align-middle">
                                         <thead class="table-light">
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Status</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th style="width: 120px;">Salary</th>
+                                                <th>Title</th>
+                                                <th>Description</th>
+                                                <th>Video Url</th>
+                                                <th>Upload date</th>
                                             </tr>
                                         </thead><!-- end thead -->
                                         <tbody>
-                                            <tr>
-                                                <td>
-                                                    <h6 class="mb-0">Charles Casey</h6>
-                                                </td>
-                                                <td>Web Developer</td>
-                                                <td>
-                                                    <div class="font-size-13"><i
-                                                            class="ri-checkbox-blank-circle-fill font-size-10 text-success me-2 align-middle"></i>Active
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    23
-                                                </td>
-                                                <td>
-                                                    04 Apr, 2021
-                                                </td>
-                                                <td>$42,450</td>
-                                            </tr>
+                                            @foreach ($videos as $video)
+                                                <tr>
+                                                    <td>
+                                                        <h6 class="mb-0">{{ $video->title }}</h6>
+                                                    </td>
+                                                    <td>{{ $video->description }}</td>
+                                                    <td>
+                                                        {{ $video->url }}
+                                                    </td>
+                                                    <td>
+                                                        {{ $video->created_at }}
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                             <!-- end -->
                                         </tbody><!-- end tbody -->
                                     </table> <!-- end table -->

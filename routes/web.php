@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\VideoController;
 
 Route::get('/', function () {
     return view('frontend.index');
@@ -66,6 +67,18 @@ Route::middleware('auth')->group(function () {
     Route::controller(ProductController::class)->group(function () {
         Route::get('/product/view', 'ProductView')->name('product.view');
         Route::get('/product/add', 'AddProduct')->name('product.add');
+    });
+});
+
+//Videos All Route
+Route::middleware('auth')->group(function () {
+    Route::controller(VideoController::class)->group(function () {
+        Route::get('/videos', 'videos')->name('video.view');
+        Route::get('/videos/add', 'add')->name('video.add');
+        Route::post('/videos/store', 'store')->name('video.store');
+        Route::get('/videos/edit/{id}', 'edit')->name('video.edit');
+        Route::post('/videos/update/{id}', 'update')->name('video.update');
+        Route::get('/videos/delete/{id}', 'destroy')->name('video.delete');
     });
 });
 
