@@ -36,29 +36,37 @@
                                 <table class="table-editable table-nowrap table-edits table align-middle">
                                     <thead class="border-bottom border-1 border-secondary">
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Title</th>
-                                            <th>Subject</th>
-                                            <th>Institute</th>
-                                            <th>Result</th>
-                                            <th>Passing Year</th>
-                                            <th>Duration</th>
-                                            <th>Achievement</th>
-                                            <th>Action</th>
+                                            <th class="border-1 border-right border-secondary">ID</th>
+                                            <th class="border-1 border-right border-secondary">Title</th>
+                                            <th class="border-1 border-right border-secondary">Subject</th>
+                                            <th class="border-1 border-right border-secondary">Institute</th>
+                                            <th class="border-1 border-right border-secondary">Result</th>
+                                            <th class="border-1 border-right border-secondary">Passing Year</th>
+                                            <th class="border-1 border-right border-secondary">Duration</th>
+                                            <th class="border-1 border-right border-secondary">Achievement</th>
+                                            <th class="border-1 border-right border-secondary">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody class="border-bottom border-1 border-secondary">
                                         @foreach ($educations as $education)
                                             <tr data-id="1">
-                                                <td data-field="id" style="width: 80px">{{ $education->id }}</td>
-                                                <td data-field="title">{{ $education->title }}</td>
-                                                <td data-field="institute">{{ $education->subject }}</td>
-                                                <td data-field="institute">{{ $education->institute }}</td>
-                                                <td data-field="institute">{{ $education->result }}</td>
-                                                <td data-field="institute">{{ $education->passing_year }}</td>
-                                                <td data-field="institute">{{ $education->duration }}</td>
-                                                <td data-field="institute">{{ $education->achievement }}</td>
-                                                <td style="width: 100px">
+                                                <td class="border-1 border-right border-secondary" data-field="id"
+                                                    style="width: 80px">{{ $education->id }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="title">
+                                                    {{ $education->title }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $education->subject }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $education->institute }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $education->result }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $education->passing_year }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $education->duration }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $education->achievement }}</td>
+                                                <td class="border-1 border-right border-secondary" style="width: 100px">
                                                     <a class="btn btn-outline-secondary btn-sm edit"
                                                         href="{{ route('edit.education', ['id' => $education->id]) }}"
                                                         title="Edit">

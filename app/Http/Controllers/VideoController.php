@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Education;
+use App\Models\Skills;
+use App\Models\Training;
 use App\Models\Video;
 use Illuminate\Http\Request;
 
@@ -15,7 +18,10 @@ class VideoController extends Controller
     public function index()
     {
         return response()->json([
-            'videos' => Video::get()
+            'videos' => Video::get(),
+            'skills' => Skills::get(),
+            'trainings' => Training::get(),
+            'educations' => Education::get()
         ]);
     }
 

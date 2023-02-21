@@ -36,19 +36,22 @@
                                 <table class="table-editable table-nowrap table-edits table align-middle">
                                     <thead class="border-bottom border-1 border-secondary">
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Skill Name</th>
-                                            <th>Skill Progress</th>
-                                            <th>Action</th>
+                                            <th class="border-1 border-right border-secondary">ID</th>
+                                            <th class="border-1 border-right border-secondary">Skill Name</th>
+                                            <th class="border-1 border-right border-secondary">Skill Progress</th>
+                                            <th class="border-1 border-right border-secondary">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody class="border-bottom border-1 border-secondary">
                                         @foreach ($skills as $skill)
                                             <tr data-id="1">
-                                                <td data-field="id" style="width: 80px">{{ $skill->id }}</td>
-                                                <td data-field="skill_name">{{ $skill->skill_name }}</td>
-                                                <td data-field="skill_progress">{{ $skill->skill_progress }}</td>
-                                                <td style="width: 100px">
+                                                <td class="border-1 border-right border-secondary" data-field="id"
+                                                    style="width: 80px">{{ $skill->id }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="skill_name">
+                                                    {{ $skill->skill_name }}</td>
+                                                <td class="border-1 border-right border-secondary"
+                                                    data-field="skill_progress">{{ $skill->skill_progress }}</td>
+                                                <td class="border-1 border-right border-secondary" style="width: 100px">
                                                     <a class="btn btn-outline-secondary btn-sm edit"
                                                         href="{{ route('edit.skill', ['id' => $skill->id]) }}"
                                                         title="Edit">

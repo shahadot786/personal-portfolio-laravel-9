@@ -36,21 +36,25 @@
                                 <table class="table-editable table-nowrap table-edits table align-middle">
                                     <thead class="border-bottom border-1 border-secondary">
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Title</th>
-                                            <th>Description</th>
-                                            <th>Video Url</th>
-                                            <th>Action</th>
+                                            <th class="border-1 border-right border-secondary">ID</th>
+                                            <th class="border-1 border-right border-secondary">Title</th>
+                                            <th class="border-1 border-right border-secondary">Description</th>
+                                            <th class="border-1 border-right border-secondary">Video Url</th>
+                                            <th class="border-1 border-right border-secondary">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody class="border-bottom border-1 border-secondary">
                                         @foreach ($videos as $video)
                                             <tr data-id="1">
-                                                <td data-field="id" style="width: 80px">{{ $video->id }}</td>
-                                                <td data-field="title">{{ $video->title }}</td>
-                                                <td data-field="institute">{{ $video->description }}</td>
-                                                <td data-field="institute">{{ $video->url }}</td>
-                                                <td style="width: 100px">
+                                                <td class="border-1 border-right border-secondary" data-field="id"
+                                                    style="width: 80px">{{ $video->id }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="title">
+                                                    {{ $video->title }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $video->description }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $video->url }}</td>
+                                                <td class="border-1 border-right border-secondary" style="width: 100px">
                                                     <a class="btn btn-outline-secondary btn-sm edit"
                                                         href="{{ route('video.edit', ['id' => $video->id]) }}"
                                                         title="Edit">

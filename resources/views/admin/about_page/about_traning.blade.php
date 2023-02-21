@@ -36,31 +36,40 @@
                                 <table class="table-editable table-nowrap table-edits table align-middle">
                                     <thead class="border-bottom border-1 border-secondary">
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Title</th>
-                                            <th>Institute</th>
-                                            <th>Topics</th>
-                                            <th>Country</th>
-                                            <th>Location</th>
-                                            <th>Duration</th>
-                                            <th>Start Date</th>
-                                            <th>End Date</th>
-                                            <th>Action</th>
+                                            <th class="border-1 border-right border-secondary">ID</th>
+                                            <th class="border-1 border-right border-secondary">Title</th>
+                                            <th class="border-1 border-right border-secondary">Institute</th>
+                                            <th class="border-1 border-right border-secondary">Topics</th>
+                                            <th class="border-1 border-right border-secondary">Country</th>
+                                            <th class="border-1 border-right border-secondary">Location</th>
+                                            <th class="border-1 border-right border-secondary">Duration</th>
+                                            <th class="border-1 border-right border-secondary">Start Date</th>
+                                            <th class="border-1 border-right border-secondary">End Date</th>
+                                            <th class="border-1 border-right border-secondary">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody class="border-bottom border-1 border-secondary">
                                         @foreach ($trainings as $training)
                                             <tr data-id="1">
-                                                <td data-field="id" style="width: 80px">{{ $training->id }}</td>
-                                                <td data-field="title">{{ $training->title }}</td>
-                                                <td data-field="institute">{{ $training->institute }}</td>
-                                                <td data-field="institute">{{ $training->topics }}</td>
-                                                <td data-field="institute">{{ $training->country }}</td>
-                                                <td data-field="institute">{{ $training->location }}</td>
-                                                <td data-field="institute">{{ $training->duration }}</td>
-                                                <td data-field="institute">{{ $training->start_date }}</td>
-                                                <td data-field="institute">{{ $training->end_date }}</td>
-                                                <td style="width: 100px">
+                                                <td class="border-1 border-right border-secondary" data-field="id"
+                                                    style="width: 80px">{{ $training->id }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="title">
+                                                    {{ $training->title }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $training->institute }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $training->topics }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $training->country }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $training->location }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $training->duration }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $training->start_date }}</td>
+                                                <td class="border-1 border-right border-secondary" data-field="institute">
+                                                    {{ $training->end_date }}</td>
+                                                <td class="border-1 border-right border-secondary" style="width: 100px">
                                                     <a class="btn btn-outline-secondary btn-sm edit"
                                                         href="{{ route('edit.traning', ['id' => $training->id]) }}"
                                                         title="Edit">

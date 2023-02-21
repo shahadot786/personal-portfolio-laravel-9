@@ -16,7 +16,7 @@
                                     <label class="col-sm-2 col-form-label" for="">Title</label>
                                     <div class="col-sm-10">
                                         <input class="form-control bg-light" id="" name="title" type="text"
-                                            value="{{ $videos->title }}">
+                                            value="{{ $videos->title }}" required>
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -25,7 +25,7 @@
                                     <label class="col-sm-2 col-form-label" for="">Description</label>
                                     <div class="col-sm-10">
                                         <input class="form-control bg-light" id="" name="description"
-                                            type="text" value="{{ $videos->description }}">
+                                            type="text" value="{{ $videos->description }}" required>
                                     </div>
                                 </div>
                                 <!-- end row -->
@@ -33,7 +33,7 @@
                                     <label class="col-sm-2 col-form-label" for="">Video Url</label>
                                     <div class="col-sm-10">
                                         <input class="form-control bg-light" id="" name="url" type="text"
-                                            value="{{ $videos->url }}">
+                                            value="{{ $videos->url }}" required>
                                     </div>
                                 </div>
                                 <!-- end row -->
