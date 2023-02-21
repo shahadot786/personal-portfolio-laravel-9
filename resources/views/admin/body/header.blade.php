@@ -62,11 +62,11 @@
                               class="ri-user-line me-1 align-middle"></i> Profile</a>
                       <a class="dropdown-item" href="{{ route('change.password') }}"><i class="ri-wallet-2-line me-1 align-middle"></i> Change
                           Password</a>
-                      <a class="dropdown-item d-block" href="#"><span
+                      {{-- <a class="dropdown-item d-block" href="#"><span
                               class="badge bg-success float-end mt-1">11</span><i
                               class="ri-settings-2-line me-1 align-middle"></i> Settings</a>
                       <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line me-1 align-middle"></i> Lock
-                          screen</a>
+                          screen</a> --}}
                       <div class="dropdown-divider"></div>
 
                       <a class="dropdown-item text-danger" href="{{ route('admin.logout') }}"><i

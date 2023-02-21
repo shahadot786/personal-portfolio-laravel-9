@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\HomeController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('frontend.index');
@@ -57,6 +58,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/edit/education/{id}', 'EditEducation')->name('edit.education');
         Route::post('/update/education{id}', 'UpdateEducation')->name('update.education');
         Route::get('/delete/education/{id}', 'DeleteEducation')->name('delete.education');
+    });
+});
+
+//Product All Route
+Route::middleware('auth')->group(function () {
+    Route::controller(ProductController::class)->group(function () {
+        Route::get('/product/view', 'ProductView')->name('product.view');
+        Route::get('/product/add', 'AddProduct')->name('product.add');
     });
 });
 

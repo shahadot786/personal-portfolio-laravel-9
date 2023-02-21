@@ -16,6 +16,17 @@
                          <span>Dashboard</span>
                      </a>
                  </li>
+                 <li>
+                     <a class="has-arrow waves-effect" href="javascript: void(0);">
+                         <i class="ri-home-fill"></i>
+                         <span>Product Section</span>
+                     </a>
+                     <ul class="sub-menu" aria-expanded="false">
+                         <li><a href="{{ route('product.add') }}">Add Product</a></li>
+                         <li><a href="{{ route('product.view') }}">View Product</a></li>
+
+                     </ul>
+                 </li>
 
                  <li>
                      <a class="has-arrow waves-effect" href="javascript: void(0);">

@@ -33,7 +33,7 @@
                         <div class="card-body">
                             <div class="d-flex">
                                 <div class="flex-grow-1">
-                                    <p class="text-truncate font-size-14 mb-2">Total Skills</p>
+                                    <p class="text-truncate font-size-14 mb-2">Total Products</p>
                                     <h2 class="mb-2">{{ $totalSkills }}</h2>
                                     <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i
                                                 class="me-1 align-middle"></i></span></p>
