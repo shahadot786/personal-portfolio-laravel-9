@@ -35,12 +35,6 @@ class VideoController extends Controller
         $video->save();
 
         return view('admin.videos.index');
-
-        // return response()->json([
-        //     'message' => 'Video added',
-        //     'status' => 'Success',
-        //     'data' => $video
-        // ]);
     }
 
     /**
